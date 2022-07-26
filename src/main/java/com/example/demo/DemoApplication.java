@@ -1,4 +1,4 @@
-// First class created but step 3 for deploying to db via CommandLineRunner
+// This is the first class created but step 3 for deploying to db via CommandLineRunner
 package com.example.demo;
 
 import org.springframework.beans.factory.annotation.Autowired;
