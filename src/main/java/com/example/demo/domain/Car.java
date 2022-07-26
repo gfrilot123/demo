@@ -5,6 +5,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.FetchType;
 
 @Entity
 public class Car {
@@ -13,9 +16,15 @@ public class Car {
     private long id;
     private String brand, model, color, registerNumber;
     private int year, price;
+
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "owner")
+    private Owner owner;
+
     public Car() {}
+
     public Car(String brand, String model, String color, String registerNumber,
-     int year, int price ) {
+     int year, int price, Owner owner ) {
         super();
         this.brand = brand;
         this.model = model;
@@ -23,6 +32,7 @@ public class Car {
         this.registerNumber = registerNumber;
         this.year = year;
         this.price = price;
+        this.owner = owner;
      }
 
     public String getBrand() {
@@ -60,6 +70,7 @@ public class Car {
     public int getYear() {
         return year;
     }
+    
 
     public void setYear(int year){
         this.year = year;
@@ -71,6 +82,14 @@ public class Car {
 
     public void setPrice(int price){
         this.price = price;
+    }
+
+    public Owner getOwner() {
+        return this.owner;
+    }
+
+    public void setOwner(Owner owner) {
+        this.owner = owner;
     }
 
     
