@@ -35,19 +35,19 @@ public class DemoApplication {
 
 	CommandLineRunner runner () {
 		return args -> {
-			Owner owner1 = new Owner("Gerald", "Frilot");
-			Owner owner2 = new Owner("Katie", "Frilot");
-			orepository.save(owner1);
-			orepository.save(owner2);
-			Car car = new Car("Ford", "Mustang", "Red", "ADF-1121",
-			2017, 59000, owner1);
-			repository.save(car);
-			car = new Car("Nissan", "Leaf", "White", "ssj-3002",
-			2014, 29000, owner2);
-			repository.save(car);
-			car = new Car("Toyota", "Prius", "Silver", "KKO-0212",
-			2018, 39000, owner2);
-			repository.save(car);
+			// Owner owner1 = new Owner("Gerald", "Frilot");
+			// Owner owner2 = new Owner("Katie", "Frilot");
+			// orepository.save(owner1);
+			// orepository.save(owner2);
+			// Car car = new Car("Ford", "Mustang", "Red", "ADF-1121",
+			// 2017, 59000, owner1);
+			// repository.save(car);
+			// car = new Car("Nissan", "Leaf", "White", "ssj-3002",
+			// 2014, 29000, owner2);
+			// repository.save(car);
+			// car = new Car("Toyota", "Prius", "Silver", "KKO-0212",
+			// 2018, 39000, owner2);
+			// repository.save(car);
 		};
 	}
 
